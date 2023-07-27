@@ -1,0 +1,7 @@
+pydantic>=2.1.1
+python-dotenv>=1.0.0
+fastapi>=0.100.0
+rich>=13.4.2
+httpx>=0.24.0
+tomli>=1.1.0 ; python_version < "3.11"
+hypercorn[trio]>=0.14.4
