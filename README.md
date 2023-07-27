@@ -1,4 +1,4 @@
-<h2 style="text-align: center;">[FOSWLY] Summarize Articles Backend</h2>
+## [FOSWLY] Summarize Articles Backend
 
 [![Python Version](https://img.shields.io/badge/Python-3.11-blue?logo=python&style=for-the-badge)](https://www.python.org/)
 [![GitHub Stars](https://img.shields.io/github/stars/FOSWLY/summarize-articles-backend?logo=github&style=for-the-badge)](https://github.com/FOSWLY/summarize-articles-backend/stargazers)
