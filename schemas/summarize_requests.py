@@ -5,18 +5,18 @@ URL_PATTERN= r'(http|https):\/\/([\w_-]+(?:(?:\.[\w_-]+)+))([\w.,@?^=%&:\/~+#-]*
 
 class GetSummarizeURLRequest(BaseModel):
     article_url: str = Field(
-        pattern=URL_PATTERN,
-        description="Link to article"
+        pattern = URL_PATTERN,
+        description = "Link to article"
     )
 
     model_config = {
         "json_schema_extra": {
             "examples": [
                 {
-                    "article_url": "https://toiloff.ru",
+                    "article_url": "https://toil.cc",
                 },
                 {
-                    "article_url": "https://bad.toiloff.ru",
+                    "article_url": "https://bad.toil.cc",
                 },
             ]
         }
@@ -45,9 +45,18 @@ class GenerationRequest(BaseModel):
         pattern = URL_PATTERN,
         description="Link to article",
         examples=[
-            "https://toiloff.ru",
+            "https://toil.cc",
         ],
         default=None
+    )
+
+    video_url: str = Field(
+        pattern = URL_PATTERN,
+        description = "Link to video",
+        examples=[
+            "https://www.youtube.com/watch?v=1Nl5APO95Hc",
+        ],
+        default = None
     )
 
     session_id: str = Field(
@@ -62,7 +71,10 @@ class GenerationRequest(BaseModel):
         "json_schema_extra": {
             "examples": [
                 {
-                    "article_url": "https://toiloff.ru",
+                    "article_url": "https://toil.cc",
+                },
+                {
+                    "video_url": "https://www.youtube.com/watch?v=1Nl5APO95Hc",
                 },
                 {
                     "session_id": "77053a47-731434ec-bc52547c-dedf879a",

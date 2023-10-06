@@ -21,9 +21,11 @@ class YandexPrivateErrorStatus(str, Enum):
     UNKNOWN_ERROR = 5 # error_code is 5 or 7 or 9
     AI_COULDNT_RETELL_ARTICLE = 6 # error_code is 6 or 8 or 11 or 12
     BROWSER_OUTDATED = 10
+    VIDEO_TOO_LONG = 21
 
 
 class YandexPrivateStatus(str, Enum):
+    SUCCESS_VIDEO = 0
     IN_PROGRESS = 1
     SUCCESS = 2
     ERROR = 3
@@ -37,3 +39,8 @@ class YandexPrivateResponse(BaseModel):
         YandexPrivateStatus.ERROR,
         YandexPrivateStatus.NOT_FOUND_IN_CACHE
     ]) # 4 - couldn't be found in the cache
+
+
+class YandexType(str, Enum):
+    VIDEO = 'video'
+    ARTICLE = 'article'
