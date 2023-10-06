@@ -28,9 +28,11 @@ async def generation(body: GenerationRequest) -> GenerationResponse:
             status_code=status.HTTP_422_UNPROCESSABLE_ENTITY,
             detail='At least one parameter for generation should be provided',
         )
-    elif len(generation_params) > 1:
+    elif 'video_url' in generation_params and 'article_url' in generation_params:
         raise HTTPException(
             status_code=status.HTTP_422_UNPROCESSABLE_ENTITY,
-            detail='You can select only 1 parameter: article_url or session_id',
+            detail='You can select only 1 parameter: article_url or video_url',
         )
-    return await YandexSummarize().generation(generation_params)
+    test = await YandexSummarize().generation(generation_params)
+    logger.info(test)
+    return test
