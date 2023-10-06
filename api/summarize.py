@@ -11,7 +11,7 @@ class YandexSummarize:
         self.domain: str = '300.ya.ru'
         self.headers: Dict = {
             "Content-Type": "application/json",
-            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 YaBrowser/23.7.0.2526 Yowser/2.5 Safari/537.36",
+            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.5845.967 YaBrowser/23.9.1.967 Yowser/2.5 Safari/537.36",
             "Referer": f'https://{self.domain}/summary',
             "Origin": f'https://{self.domain}',
             "pragma": "no-cache",
