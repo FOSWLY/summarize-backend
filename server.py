@@ -1,6 +1,6 @@
 from core.app import app
 from hypercorn.config import Config
-from core.logger.main import init_logging
+from core.logger import init_logging
 from routes import api_router
 
 
