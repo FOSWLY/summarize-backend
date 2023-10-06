@@ -1,15 +1,23 @@
 import re
 import os
 import json
-import toml
 from dotenv import load_dotenv
+
+try:
+    import tomllib
+except ModuleNotFoundError:
+    import tomli as tomllib
 
 JSON_FILE = re.compile(".*.json")
 
 def load_cfg():
-    """Загружает конфиг файл"""
-    cfg = toml.load('./config/config.cfg')
-    return cfg
+    """Загружает конфиг файл
+
+    Returns:
+        toml: Загруженный toml файл
+    """
+    with open(f'./config/config.cfg', 'rb') as f:
+        return tomllib.load(f)
 
 def load_json(file: str):
     """Загружает выбранный json файл из папки с конфигами
