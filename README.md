@@ -1,12 +1,16 @@
-## [FOSWLY] Summarize Articles Backend
+## [FOSWLY] Summarize Backend
 
 [![Python Version](https://img.shields.io/badge/Python-3.11-blue?logo=python&style=for-the-badge)](https://www.python.org/)
-[![GitHub Stars](https://img.shields.io/github/stars/FOSWLY/summarize-articles-backend?logo=github&style=for-the-badge)](https://github.com/FOSWLY/summarize-articles-backend/stargazers)
-[![GitHub Issues](https://img.shields.io/github/issues/FOSWLY/summarize-articles-backend?style=for-the-badge)](https://github.com/FOSWLY/summarize-articles-backend/issues)
-[![Current Version](https://img.shields.io/github/v/release/FOSWLY/summarize-articles-backend?style=for-the-badge)](https://github.com/FOSWLY/summarize-articles-backend)
-[![GitHub License](https://img.shields.io/github/license/FOSWLY/summarize-articles-backend?style=for-the-badge)](https://github.com/FOSWLY/summarize-articles-backend/blob/master/LICENSE)
+[![GitHub Stars](https://img.shields.io/github/stars/FOSWLY/summarize-backend?logo=github&style=for-the-badge)](https://github.com/FOSWLY/summarize-backend/stargazers)
+[![GitHub Issues](https://img.shields.io/github/issues/FOSWLY/summarize-backend?style=for-the-badge)](https://github.com/FOSWLY/summarize-backend/issues)
+[![Current Version](https://img.shields.io/github/v/release/FOSWLY/summarize-backend?style=for-the-badge)](https://github.com/FOSWLY/summarize-backend)
+[![GitHub License](https://img.shields.io/github/license/FOSWLY/summarize-backend?style=for-the-badge)](https://github.com/FOSWLY/summarize-backend/blob/master/LICENSE)
 
-**[FOSWLY] Summarize Articles Backend** - cервер, который реализует Yandex Summarize API для нашего браузерного расширения. Сервер не содержит никакой авторизации и может быть использован для ваших проектов.
+**[FOSWLY] Summarize Backend** - cервер, который реализует Yandex Summarize API для нашего браузерного расширения. Сервер не содержит никакой авторизации и может быть использован для ваших проектов.
+
+## 📝 Функционал
+- Суммаризатор статей
+- Суммаризатор видео
 
 ## 📦 Деплой
 1. Установите Python 3.11 (на других версиях не тестировался)
