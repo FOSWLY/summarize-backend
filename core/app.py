@@ -13,7 +13,7 @@ def custom_openapi():
         return app.openapi_schema
     openapi_schema = get_openapi(
         title=settings['site_name'],
-        version="1.0.0",
+        version="1.1.0",
         description=f"{settings['site_name']} is Free Yandex Summarize API without any authorization or restrictions.",
         license_info = {
             "name": "MIT",
@@ -26,7 +26,7 @@ def custom_openapi():
         ],
         contact = {
             "name": "Developer",
-            "url": "https://github.com/FOSWLY/summarize-articles-backend",
+            "url": "https://github.com/FOSWLY/summarize-backend",
             "email": "toil.contact@yandex.com"
         },
         routes = app.routes,
@@ -43,6 +43,10 @@ tags_meta = [
     {
         'name': 'Summarize',
         'description': 'Interaction with Yandex Summarize API without any authorization or restrictions'
+    },
+    {
+        'name': 'Health',
+        'description': 'Health of our servers'
     }
 ]
 
