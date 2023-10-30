@@ -82,7 +82,6 @@ class GetSummaryDataResponse(YandexPrivateResponse):
         default=None
     )
     normalized_url: str = Field(
-        pattern=URL_PATTERN,
         description="Link to the original article",
         default=None,
     )
@@ -287,9 +286,14 @@ class GenerationResponse(GetSummaryDataResponse):
     )
 
     type: str = Field(
-        # video or article
-        description="Type of content (video or article)",
+        # video or article or text
+        description="Type of content (video or article or text)",
         default=None,
+    )
+
+    total_parts: int = Field(
+        description="total_parts",
+        default=None
     )
 
     model_config = {
