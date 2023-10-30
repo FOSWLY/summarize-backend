@@ -1,17 +1,16 @@
-from datetime import datetime
 import logging
 import os
 import sys
 import rich
 
+from datetime import datetime
 from rich.logging import RichHandler
 from rich.theme import Theme
 from rich.style import Style
 
-from config.load import load_cfg
+from core.settings import get_settings
 
-
-log_settings = load_cfg()['logging']
+settings = get_settings()
 
 def init_logging():
     logger = logging.getLogger()
@@ -23,7 +22,7 @@ def init_logging():
         except OSError as err:
             logger.error(f'Failed to create log directory: {err}')
 
-    if log_settings['rich_formatter']:
+    if settings.log_rich_formatter:
         rich_console = rich.get_console()
         rich.reconfigure(tab_size = 4)
         # Theme from https://github.com/Cog-Creators/Red-DiscordBot/blob/V3/develop/redbot/logging.py
@@ -49,14 +48,14 @@ def init_logging():
         stdout_handler = logging.StreamHandler(sys.stdout)
 
     log_handlers = [stdout_handler]
-    if log_settings['save']:
+    if settings.log_save:
         log_name = f'./logs/main{datetime.now().strftime("%Y%m%d")}.log'
         filehandler = logging.FileHandler(log_name, encoding='utf-8')
-        filehandler.setLevel(log_settings['level'])
+        filehandler.setLevel(settings.log_level)
         log_handlers.append(filehandler) # type: ignore
 
     logging.basicConfig(
-        level = log_settings['level'],
+        level = settings.log_level,
         datefmt = '%Y-%m-%d %H:%M:%S',
         format = '[{asctime}] [{levelname}] {name}: {message}',
         style = '{',

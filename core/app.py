@@ -3,42 +3,9 @@ from fastapi.staticfiles import StaticFiles
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.openapi.utils import get_openapi
 
-from config.load import load_cfg
+from core.settings import get_settings
 
-settings = load_cfg()['server']
-
-
-def custom_openapi():
-    if app.openapi_schema:
-        return app.openapi_schema
-    openapi_schema = get_openapi(
-        title=settings['site_name'],
-        version="1.1.0",
-        description=f"{settings['site_name']} is Free Yandex Summarize API without any authorization or restrictions.",
-        license_info = {
-            "name": "MIT",
-        },
-        servers=[
-            {
-                "name": "production",
-                "url": settings['site_url']
-            }
-        ],
-        contact = {
-            "name": "Developer",
-            "url": "https://github.com/FOSWLY/summarize-backend",
-            "email": "toil.contact@yandex.com"
-        },
-        routes = app.routes,
-        tags = tags_meta
-    )
-    openapi_schema["info"]["x-logo"] = {
-        "url": "/static/assets/logo.svg",
-        "altText": "logo"
-    }
-    app.openapi_schema = openapi_schema
-    return app.openapi_schema
-
+settings = get_settings()
 tags_meta = [
     {
         'name': 'Summarize',
@@ -49,6 +16,31 @@ tags_meta = [
         'description': 'Health of our servers'
     }
 ]
+
+def custom_openapi():
+    if app.openapi_schema:
+        return app.openapi_schema
+    openapi_schema = get_openapi(
+        title=settings.app_name,
+        version=settings.app_version,
+        description=settings.app_desc,
+        license_info = {
+            "name": settings.app_license,
+        },
+        contact = {
+            "name": "Developer",
+            "url": settings.app_developer_url,
+            "email": settings.app_developer_email
+        },
+        routes = app.routes,
+        tags = tags_meta
+    )
+    openapi_schema["info"]["x-logo"] = {
+        "url": "/static/assets/logo.svg",
+        "altText": "logo"
+    }
+    app.openapi_schema = openapi_schema
+    return app.openapi_schema
 
 
 app = FastAPI(openapi_url = '/openapi.json', docs_url = '/docs', redoc_url = '/redoc')
