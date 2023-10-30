@@ -1,13 +1,16 @@
-import logging
 from fastapi import APIRouter
 
 
+from core.settings import get_settings
 from schemas.health import HealthResponse
 
 router = APIRouter()
-logger = logging.getLogger(__name__)
+settings = get_settings()
 
 
 @router.get('/health', response_model=HealthResponse)
 async def get_health() -> HealthResponse:
-    return HealthResponse(status = 'ok')
+    return HealthResponse(
+        status = 'ok',
+        version = settings.app_version
+    )
