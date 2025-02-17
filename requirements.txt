@@ -1,6 +1,0 @@
-fastapi[all]>=0.104.0
-hypercorn>=0.14.4
-pydantic>=2.4.2
-pydantic-settings>=2.0.3
-rich>=13.4.2
-httpx>=0.24.0
