@@ -1,0 +1,10 @@
+{
+  "apps": [
+    {
+      "name": "summarize-backend",
+      "namespace": "FOSWLY",
+      "script": "bun",
+      "args": "run start"
+    }
+  ]
+}
