@@ -47,6 +47,7 @@ export const ConfigSchema = t.Object({
   logging: t.Object({
     level: LoggingLevel,
     logPath: t.String(),
+    logToFile: t.Boolean({ default: false }),
     loki: t.Object({
       host: t.String({ default: "" }),
       user: t.String({ default: "" }),
