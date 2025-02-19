@@ -12,7 +12,7 @@ import summarizeController from "./controllers/summarize";
 import sharingController from "./controllers/sharing";
 import { SharingAPITokenNotFoundError, SharingUrlNotFoundError } from "./errors";
 
-if (!(await fs.exists(config.logging.logPath))) {
+if (config.logging.logToFile && !(await fs.exists(config.logging.logPath))) {
   await fs.mkdir(config.logging.logPath, { recursive: true });
   log.info(`Created log directory`);
 }
