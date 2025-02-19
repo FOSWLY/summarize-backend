@@ -1,6 +1,6 @@
 {
   "name": "summarize-backend",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "author": "Toil",
   "repository": {
     "type": "git",
@@ -14,7 +14,7 @@
   },
   "dependencies": {
     "@elysiajs/swagger": "^1.2.0",
-    "@toil/neurojs": "^1.1.1",
+    "@toil/neurojs": "^1.1.2",
     "elysia": "1.2.6",
     "elysia-http-status-code": "^1.0.9",
     "pino": "^9.5.0",

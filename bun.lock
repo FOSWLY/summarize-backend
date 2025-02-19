@@ -5,7 +5,7 @@
       "name": "summarize-backend",
       "dependencies": {
         "@elysiajs/swagger": "^1.2.0",
-        "@toil/neurojs": "^1.1.1",
+        "@toil/neurojs": "^1.1.2",
         "elysia": "1.2.6",
         "elysia-http-status-code": "^1.0.9",
         "pino": "^9.5.0",
@@ -85,7 +85,7 @@
 
     "@sinclair/typebox": ["@sinclair/typebox@0.34.25", "", {}, "sha512-gu+tdy9WZIRulrR4CAcGXZAAixwakKszkUXudMJ4EhtNflBEify5Pm5vnVEVqdmMkxnT4tcdfJps5XYqaNeF9Q=="],
 
-    "@toil/neurojs": ["@toil/neurojs@1.1.1", "", { "dependencies": { "@bufbuild/protobuf": "^2.2.3", "@vot.js/core": "^2.2.5", "@vot.js/shared": "^2.2.5" }, "peerDependencies": { "typescript": "^5.7.3" } }, "sha512-wbiGHrxOAOMswKYOL1xJufjDxC3G51tSVPPtQr0Tk1r4DzYuoh66s1LlQVSNKCIGTqYkVp6DchpFFOGceizKog=="],
+    "@toil/neurojs": ["@toil/neurojs@1.1.2", "", { "dependencies": { "@bufbuild/protobuf": "^2.2.3", "@vot.js/core": "^2.2.6", "@vot.js/shared": "^2.2.6" }, "peerDependencies": { "typescript": "^5.7.3" } }, "sha512-moUNsyoVaQpaCNrAsqkvrVkDak2hZtQraDfxmq8iicYAKk97pjAChRIXgXbj0xQbsM2o78u8yvs1Wm/p5HifYg=="],
 
     "@types/estree": ["@types/estree@1.0.6", "", {}, "sha512-AYnb1nQyY49te+VRAVgmzfcgjYS91mY5P0TKUDCLEM+gNnA+3T6rWITXRLYCpahpqSQbN5cE+gHpnPyXjHWxcw=="],
 
