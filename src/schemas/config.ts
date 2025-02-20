@@ -39,10 +39,10 @@ export const ConfigSchema = t.Object({
     scalarCDN: t.Literal(scalarCDN, { readOnly: true, default: scalarCDN }),
   }),
   cors: t.Object({
-    "Access-Control-Allow-Origin": t.String({ default: "*" }),
-    "Access-Control-Allow-Headers": t.String({ default: "*" }),
-    "Access-Control-Allow-Methods": t.String({ default: "POST, GET, OPTIONS" }),
-    "Access-Control-Max-Age": t.String({ default: "86400" }),
+    allowedHeaders: t.String({ default: "*" }),
+    origin: t.String({ default: "*" }),
+    methods: t.String({ default: "GET, POST, OPTIONS" }),
+    maxAge: t.Number({ default: 86400 }),
   }),
   logging: t.Object({
     level: LoggingLevel,

@@ -1,6 +1,6 @@
 {
   "name": "summarize-backend",
-  "version": "2.0.2",
+  "version": "2.0.3",
   "author": "Toil",
   "repository": {
     "type": "git",
@@ -21,6 +21,7 @@
     "pino-loki": "^2.4.0"
   },
   "devDependencies": {
+    "@elysiajs/cors": "^1.2.0",
     "@sinclair/typebox": "^0.34.13",
     "bun-types": "^1.1.41",
     "eslint": "^9.17.0",

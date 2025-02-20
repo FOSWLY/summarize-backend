@@ -2,6 +2,7 @@ import fs from "node:fs/promises";
 
 import { Elysia } from "elysia";
 import { swagger } from "@elysiajs/swagger";
+import { cors } from "@elysiajs/cors";
 import { HttpStatusCode } from "elysia-http-status-code";
 
 import config from "./config";
@@ -47,11 +48,7 @@ const app = new Elysia({
     }),
   )
   .use(HttpStatusCode())
-  .onRequest(({ set }) => {
-    for (const [key, val] of Object.entries(config.cors)) {
-      set.headers[key] = val;
-    }
-  })
+  .use(cors(config.cors))
   .error({
     SHARING_URL_NOT_FOUND: SharingUrlNotFoundError,
     SHARING_API_TOKEN_NOT_FOUND: SharingAPITokenNotFoundError,
