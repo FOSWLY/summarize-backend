@@ -5,7 +5,7 @@
 [![Current Version](https://img.shields.io/github/v/release/FOSWLY/summarize-backend?style=for-the-badge)](https://github.com/FOSWLY/summarize-backend)
 [![GitHub License](https://img.shields.io/github/license/FOSWLY/summarize-backend?style=for-the-badge)](https://github.com/FOSWLY/summarize-backend/blob/master/LICENSE)
 
-**Summarize Backend** - cервер, унифицированные конечные точки для API суммаризации из библиотеки [@toil/neurojs](https://github.com/FOSWLY/neurojs).
+**Summarize Backend** - cервер, предоставляющий унифицированные конечные точки для API суммаризации из библиотеки [@toil/neurojs](https://github.com/FOSWLY/neurojs).
 
 ## 📝 Функционал
 
